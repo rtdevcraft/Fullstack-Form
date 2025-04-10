@@ -29,7 +29,8 @@ COPY . .
 
 RUN npm install lightningcss --no-save
 RUN npm install -D tailwindcss postcss autoprefixer
-
+RUN mkdir -p /app/node_modules/@tailwindcss && \
+    echo "module.exports = require('tailwindcss');" > /app/node_modules/@tailwindcss/postcss.js
 # Build application
 RUN npx next build --experimental-build-mode compile
 

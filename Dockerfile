@@ -28,7 +28,7 @@ RUN npm ci --include=dev
 COPY . .
 
 RUN npm install lightningcss --no-save
-RUN npm install @tailwindcss/postcss --no-save
+RUN npm install -D tailwindcss postcss autoprefixer
 
 # Build application
 RUN npx next build --experimental-build-mode compile

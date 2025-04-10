@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import pool from '@/lib/db' // Import the database pool
+import pool from '../../../lib/db'
 
 export async function POST(request: Request) {
   try {

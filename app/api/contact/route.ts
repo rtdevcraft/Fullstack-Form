@@ -2,6 +2,15 @@ import { NextResponse } from 'next/server'
 import pool from '../../../lib/db'
 
 export async function POST(request: Request) {
+  // Check if we're in an environment without database access
+  if (!process.env.POSTGRES_URL) {
+    console.warn('Database not configured - POSTGRES_URL is missing')
+    return NextResponse.json(
+      { message: 'Database not configured yet' },
+      { status: 503 }
+    )
+  }
+
   try {
     const body = await request.json()
     const { name, email, message } = body

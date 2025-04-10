@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  // Your other Next.js config options
+  experimental: {
+    webpackBuildWorker: false,
+  },
+
+  webpack: (config) => {
+    return config
+  },
 }
 
 module.exports = nextConfig

@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-form",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:setup": "tsx scripts/setup-db.ts"
+  },
+  "dependencies": {
+    "next": "^15.3.0",
+    "pg": "^8.14.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@flydotio/dockerfile": "^0.7.10",
+    "@netlify/plugin-nextjs": "^5.10.4",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pg": "^8.11.11",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

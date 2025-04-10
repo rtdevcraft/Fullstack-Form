@@ -1,4 +1,4 @@
-import pool from '../lib/db' // Adjust path as needed
+import pool from '../lib/db'
 
 async function setupDatabase() {
   const client = await pool.connect()
@@ -25,7 +25,7 @@ async function setupDatabase() {
           name VARCHAR(255) NOT NULL,
           email VARCHAR(255) NOT NULL,
           message TEXT NOT NULL,
-          created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+          timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
         );
       `
       await client.query(createTableQuery)

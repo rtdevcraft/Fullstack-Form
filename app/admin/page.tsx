@@ -7,7 +7,7 @@ interface Submission {
   name: string
   email: string
   message: string
-  created_at: string
+  timestamp: string
 }
 
 export default function AdminPage() {
@@ -100,7 +100,7 @@ export default function AdminPage() {
                   ID: {submission.id}
                 </span>
                 <span className='text-xs text-gray-500'>
-                  {new Date(submission.created_at).toLocaleString()}
+                  {new Date(submission.timestamp).toLocaleString()}
                 </span>
               </div>
               <p className='mb-1'>

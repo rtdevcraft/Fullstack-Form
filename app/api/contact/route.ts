@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     const body = await request.json()
     const { name, email, message } = body
 
-    // Basic validation (can be expanded)
+    // Basic validation
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: 'Missing required fields' },
@@ -23,10 +23,7 @@ export async function POST(request: Request) {
       )
     }
 
-    console.log('Received contact form submission:')
-    console.log('Name:', name)
-    console.log('Email:', email)
-    console.log('Message:', message)
+    console.log('Received contact form submission:', { name, email, message })
 
     // Database insertion logic
     const queryText =

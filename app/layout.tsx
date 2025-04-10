@@ -1,10 +1,6 @@
 import type { Metadata } from 'next'
-import { Roboto_Flex } from 'next/font/google'
-import './globals.css'
 
-const robotoFlex = Roboto_Flex({
-  subsets: ['latin'],
-})
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Fullstack Contact Form with PostgreSQL',
@@ -17,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className={robotoFlex.className}>
+    <html lang='en'>
       <body>{children}</body>
     </html>
   )

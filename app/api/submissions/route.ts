@@ -6,7 +6,7 @@ export async function GET() {
     const client = await pool.connect()
     try {
       const result = await client.query(
-        'SELECT id, name, email, message, created_at FROM contacts ORDER BY created_at DESC'
+        'SELECT id, name, email, message, timestamp FROM contacts ORDER BY timestamp DESC'
       )
       return NextResponse.json(result.rows, { status: 200 })
     } finally {
